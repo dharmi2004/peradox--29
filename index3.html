@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch case</title>
+    <script>
+        // var day = 5;
+        let myDate = new Date();
+        var day = myDate.getDay()
+        switch (day) {
+            case 0:
+                document.write("today is sunday");
+                break;
+            case 1:
+                document.write("today is monday");
+                break;
+            case 2:
+                document.write("today is tuesday");
+                break;
+            case 3:
+                document.write("today is wednesday");
+                break;
+            case 4:
+                document.write("today is thursday");
+                break;
+            case 5:
+                document.write("today is friday");
+                break;
+            case 6:
+                document.write("today is saturday");
+                break;
+
+            default:
+                document.write("enter the valid week day");
+
+        }
+        //  Arrays methods
+
+        // 1.length
+        const nature = ["sunflower", "sky", "yello", "sun"];
+        const pets = ["dog", "cat", "goat"]
+        let size = nature.length;
+        console.log(size);
+
+        // 2.string()
+
+        let string = nature.toString();
+        console.log("stirng", string)
+
+        // 3. at()
+        let at = nature.at(2)
+        console.log("at", at)
+
+        //4. JOIN
+        console.log(nature.join("*"))
+
+        //5 push method
+        nature.push("pineple")
+        console.log(nature)
+
+        //6  pop method
+        console.log(nature.pop())
+
+        // 7 concat method
+        const newArray = nature.concat(pets)
+        console.log("newArray", newArray)
+
+
+        // map
+
+        var ary = [22, 4, 34, 10, 900];
+        var b = ary.map(test);
+        document.write(b);
+
+        function test(x) {
+            return x * 10;
+        }
+
+        //    hoisting
+
+        var a = 10;
+        console.log(a);
+
+
+        function fn() {
+            console.log(a);
+            var a = 20;
+            console.log(a);
+        }
+        fn();
+        // set
+
+
+        const letters = new Set();
+
+
+        letters.add("a");
+        letters.add("b");
+        letters.add("c");
+
+
+        document.getElementById("set").innerHTML = letters.size;
+    </script>
+</head>
+
+
+<body>
+
+    <p id="set"></p>
+</body>
+
+</html>
